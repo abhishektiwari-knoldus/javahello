@@ -17,4 +17,17 @@ pipeline {
       }
     }
   }
+  post{
+        success{
+            mail to: "abhisheksandilya03@gmail.com",
+            subject: "Build is successfull",
+            body: "success"
+        }
+    failure{
+      mail to: "abhisheksandilya03@gmail.com",
+            subject: "Build is failed",
+            body: "failed"
+    }
   }
+  
+}
